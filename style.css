@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  --black: black;
+  --white: white;
+  --charcoal-gray: #36454f;
+  --lighter-gray: #f2f6f7;
+  --lightest-gray: #f4f5f7;
+}
+body {
+  font-family: "lato", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.5;
+}
+header {
+  min-height: 5rem;
+  background: white;
+}
+
+#navbar {
+  min-height: 5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 8px;
+}
+
+#navbar div#nav-icons {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#navbar div#nav-icons a i {
+  color: var(--black);
+  transition: 0.3s;
+}
+#navbar div#nav-icons a i:hover {
+  color: var(--charcoal-gray);
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-around;
+  min-width: 55%;
+  height: 100%;
+}
+#navbar ul li {
+  margin: 0 1px;
+  list-style: none;
+}
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--black);
+  display: block;
+  font-weight: 400;
+  transition: 0.3s;
+}
+#navbar ul li a.active {
+  background: var(--black);
+  color: var(--white);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+#navbar ul li a:hover {
+  background: var(--charcoal-gray);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.burger-menu {
+  padding-top: 5px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+.line {
+  width: 40px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+  margin: 0.6rem auto;
+}
+
+#hero-background {
+  background: url("https://i.ibb.co/6rJdGm9/blake-wisz-p-PA-q5v1a8-unsplash.jpg")
+    no-repeat center/cover;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  transform: rotate(180deg);
+  background-position: bottom center;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 13vh;
+  margin-left: 5vw;
+  width: 45%;
+  height: 75vh;
+  gap: 3%;
+}
+
+#hero-content h2 {
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: left;
+  font-size: clamp(2.4rem, 5.7vw, 65rem);
+}
+
+#hero-content input#hero-search {
+  background: url("/Users/me/Documents/100devslabs/class8hw/lucinaspizza/assets/magnifying-glass-solid\ \(1\).svg")
+    no-repeat left/contain;
+  background-size: 15px;
+  padding-left: 4vw;
+  padding-right: 3vw;
+  padding-bottom: 0.7vh;
+  border: 3px solid var(--black);
+  border-radius: 2px;
+  width: 65%;
+}
+#hero-content #start-search {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0 1.5vw 0.5vh 1.5vw;
+  border: 3px solid var(--black);
+  border-radius: 2px;
+}
+#hero-content #start-search:hover {
+  background-color: var(--charcoal-gray);
+  border-color: var(--charcoal-gray);
+}
+#hero-content div#social-links {
+  display: flex;
+  width: 40%;
+  gap: 0.8rem;
+}
+
+#section2-container {
+  padding: 4rem 1rem;
+  background-color: var(--lighter-gray);
+}
+#section2-container h3 {
+  font-size: max(1.8rem, 2.5vw);
+  font-style: italic;
+}
+#section2-container h4 {
+  font-size: max(2.2rem, 2.4vw);
+}
+#section2-container * {
+  text-align: center;
+}
+#section2-heading {
+  margin-bottom: 2.8rem;
+}
+#section2-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#section2-body p {
+  font-size: max(1.4rem, 1.5vw);
+}
+#section2-container #show-menu {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0 1.5vw 0.5vh 1.5vw;
+  border: 3px solid var(--black);
+  border-radius: 2px;
+  width: 30%;
+  margin-top: 1.4rem;
+  text-decoration: none;
+  display: block;
+}
+#section2-container #show-menu:hover {
+  background-color: var(--charcoal-gray);
+  border-color: var(--charcoal-gray);
+}
+#section3 {
+  padding: 0 1rem;
+}
+
+#section3 .section3-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding-top: 3.7rem;
+  margin-bottom: 2rem;
+}
+#section3 .section3-heading span {
+  font-style: italic;
+  font-size: max(1.5rem, 1.6vw);
+}
+#section3 .section3-heading h3 {
+  font-size: max(1.8rem, 2.2vw);
+}
+#section3 .fooditem img {
+  max-width: 100%;
+  height: auto;
+}
+.food-choice {
+  text-align: center;
+}
+#food-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.1rem;
+  margin-bottom: 3.5rem;
+}
+#food-choices .fooditem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+#food-choices .fooditem span {
+  font-size: max(2.4rem, 2.1vw);
+  border-bottom: 2px solid var(--black);
+}
+#section4-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightest-gray);
+  padding: 0 1rem;
+}
+#section4-container .section4-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4.7rem;
+  margin-bottom: 2rem;
+}
+#section4-container .section4-subhd {
+  font-size: max(1.6rem, 1.8vw);
+  font-weight: bold;
+  color: var(--charcoal-gray);
+}
+#section4-container .section4-hd {
+  font-size: max(2rem, 2.3vw);
+}
+
+#section4-container .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#section4-container .contact-info .fa-phone {
+  font-size: 3.5vw;
+}
+#section4-container .contact-info span {
+  font-size: max(1.3rem, 1.5vw);
+}
+#section4-container #show-hours {
+  display: flex;
+  gap: 4.5vw;
+  margin: 0 auto;
+  margin-bottom: 3.6rem;
+}
+#section4-container #show-hours div {
+  display: flex;
+  flex-direction: column;
+}
+#section4-container #show-hours span {
+  font-size: max(1.2rem, 1.5vw);
+}
+#footer {
+  text-align: center;
+  min-height: 3.3rem;
+}
+#footer span {
+  font-size: max(0.8rem, 1vw);
+  text-decoration: none;
+  color: var(--black);
+}
+@media (min-width: 800px) {
+  #section2-container * {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  #food-choices {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 799px) {
+  #header #navbar #nav-links,
+  #header #navbar #nav-icons {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
